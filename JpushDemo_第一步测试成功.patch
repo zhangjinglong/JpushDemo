@@ -1,0 +1,2791 @@
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/compiler.xml	(revision )
++++ .idea/compiler.xml	(revision )
+@@ -0,0 +1,22 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <resourceExtensions />
++    <wildcardResourcePatterns>
++      <entry name="!?*.java" />
++      <entry name="!?*.form" />
++      <entry name="!?*.class" />
++      <entry name="!?*.groovy" />
++      <entry name="!?*.scala" />
++      <entry name="!?*.flex" />
++      <entry name="!?*.kt" />
++      <entry name="!?*.clj" />
++      <entry name="!?*.aj" />
++    </wildcardResourcePatterns>
++    <annotationProcessing>
++      <profile default="true" name="Default" enabled="false">
++        <processorPath useClasspath="true" />
++      </profile>
++    </annotationProcessing>
++  </component>
++</project>
+\ No newline at end of file
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .gitignore	(revision )
++++ .gitignore	(revision )
+@@ -0,0 +1,8 @@
++*.iml
++.gradle
++/local.properties
++/.idea/workspace.xml
++/.idea/libraries
++.DS_Store
++/build
++/captures
+Index: app/src/main/res/layout/jpush_popwin_layout.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/jpush_popwin_layout.xml	(revision )
++++ app/src/main/res/layout/jpush_popwin_layout.xml	(revision )
+@@ -0,0 +1,15 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    android:id="@+id/popLayoutId"
++    style="@style/MyDialogStyle"
++    android:orientation="vertical"
++    android:layout_width="280dp"
++    android:layout_height="250dp" >
++
++        <WebView
++            android:layout_width="match_parent"
++            android:layout_height="match_parent"
++            android:id="@+id/wvPopwin"/>
++
++</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/values/dimens.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/dimens.xml	(revision )
++++ app/src/main/res/values/dimens.xml	(revision )
+@@ -0,0 +1,6 @@
++<resources>
++    <!-- Default screen margins, per the Android Design guidelines. -->
++    <dimen name="activity_horizontal_margin">16dp</dimen>
++    <dimen name="activity_vertical_margin">16dp</dimen>
++    <dimen name="fab_margin">16dp</dimen>
++</resources>
+Index: .idea/.name
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/.name	(revision )
++++ .idea/.name	(revision )
+@@ -0,0 +1,1 @@
++JPushDemo
+\ No newline at end of file
+Index: app/src/main/res/drawable-hdpi/tiledstripes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/drawable-hdpi/tiledstripes.xml	(revision )
++++ app/src/main/res/drawable-hdpi/tiledstripes.xml	(revision )
+@@ -0,0 +1,4 @@
++<?xml version="1.0" encoding="utf-8"?>
++<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
++    android:src="@drawable/stripes" 
++    android:tileMode="repeat" />
+\ No newline at end of file
+Index: app/src/main/res/layout/main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/main.xml	(revision )
++++ app/src/main/res/layout/main.xml	(revision )
+@@ -0,0 +1,83 @@
++<?xml version="1.0" encoding="utf-8"?>
++    <RelativeLayout android:layout_width="fill_parent"
++        xmlns:android="http://schemas.android.com/apk/res/android"
++        android:background="@drawable/tiledstripes"
++        android:layout_height="fill_parent" >
++    <LinearLayout
++        android:layout_width="fill_parent"
++        android:layout_height="wrap_content"
++        android:orientation="vertical"
++        android:padding="8dip" >
++        <TextView
++            android:layout_width="fill_parent"
++            android:layout_height="wrap_content"
++            
++             />
++        <TextView
++            android:id="@+id/tv_appkey"
++            android:layout_width="fill_parent"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="8dip"
++              />
++        <TextView
++            android:id="@+id/tv_package"
++            android:layout_width="fill_parent"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="8dip"
++              />
++         <TextView
++            android:id="@+id/tv_imei"
++            android:layout_width="fill_parent"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="8dip"
++              />
++        <TextView
++            android:id="@+id/tv_device_id"
++            android:layout_width="fill_parent"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="8dip"/>
++         
++        <TextView
++            android:id="@+id/tv_version"
++            android:layout_width="fill_parent"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="8dip"
++              />
++
++        <Button
++            android:id="@+id/init"
++            android:layout_width="fill_parent"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="8dip"
++            android:text="initPush" />
++        
++          <Button
++            android:id="@+id/stopPush"
++            android:layout_width="fill_parent"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="8dip"
++            android:text="stopPush" />
++            <Button
++            android:id="@+id/resumePush"
++            android:layout_width="fill_parent"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="8dip"
++            android:text="resumePush" />
++            
++            <EditText
++            android:id="@+id/msg_rec"
++            android:layout_width="fill_parent"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="8dip"
++            android:visibility="invisible" />
++             
++       
++   </LinearLayout>
++      <Button
++            android:id="@+id/setting" 
++            android:layout_width="fill_parent"
++            android:layout_height="wrap_content"
++            android:layout_alignParentBottom="true"
++            
++            android:text="高级功能" /> 
++</RelativeLayout>
+Index: app/proguard-rules.pro
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/proguard-rules.pro	(revision )
++++ app/proguard-rules.pro	(revision )
+@@ -0,0 +1,17 @@
++# Add project specific ProGuard rules here.
++# By default, the flags in this file are appended to flags specified
++# in /Users/zhangjinglong/Documents/android-sdk-macosx/tools/proguard/proguard-android.txt
++# You can edit the include path and order by changing the proguardFiles
++# directive in build.gradle.
++#
++# For more details, see
++#   http://developer.android.com/guide/developing/tools/proguard.html
++
++# Add any project specific keep options here:
++
++# If your project uses WebView with JS, uncomment the following
++# and specify the fully qualified class name to the JavaScript interface
++# class:
++#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
++#   public *;
++#}
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(revision )
++++ .idea/vcs.xml	(revision )
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: app/src/main/res/values-w820dp/dimens.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values-w820dp/dimens.xml	(revision )
++++ app/src/main/res/values-w820dp/dimens.xml	(revision )
+@@ -0,0 +1,6 @@
++<resources>
++    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
++         (such as screen margins) for screens with more than 820dp of available width. This
++         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
++    <dimen name="activity_horizontal_margin">64dp</dimen>
++</resources>
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision )
++++ .idea/misc.xml	(revision )
+@@ -0,0 +1,81 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="EntryPointsManager">
++    <entry_points version="2.0" />
++  </component>
++  <component name="MavenImportPreferences">
++    <option name="generalSettings">
++      <MavenGeneralSettings>
++        <option name="mavenHome" value="Bundled (Maven 3)" />
++      </MavenGeneralSettings>
++    </option>
++  </component>
++  <component name="NullableNotNullManager">
++    <option name="myDefaultNullable" value="android.support.annotation.Nullable" />
++    <option name="myDefaultNotNull" value="android.support.annotation.NonNull" />
++    <option name="myNullables">
++      <value>
++        <list size="4">
++          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.Nullable" />
++          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nullable" />
++          <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.Nullable" />
++          <item index="3" class="java.lang.String" itemvalue="android.support.annotation.Nullable" />
++        </list>
++      </value>
++    </option>
++    <option name="myNotNulls">
++      <value>
++        <list size="4">
++          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.NotNull" />
++          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nonnull" />
++          <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.NonNull" />
++          <item index="3" class="java.lang.String" itemvalue="android.support.annotation.NonNull" />
++        </list>
++      </value>
++    </option>
++  </component>
++  <component name="ProjectInspectionProfilesVisibleTreeState">
++    <entry key="Project Default">
++      <profile-state>
++        <expanded-state>
++          <State>
++            <id />
++          </State>
++          <State>
++            <id>Android</id>
++          </State>
++          <State>
++            <id>Android Lint</id>
++          </State>
++          <State>
++            <id>Java</id>
++          </State>
++          <State>
++            <id>Java language level migration aidsJava</id>
++          </State>
++        </expanded-state>
++        <selected-state>
++          <State>
++            <id>Since15</id>
++          </State>
++        </selected-state>
++      </profile-state>
++    </entry>
++  </component>
++  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
++    <OptionsSetting value="true" id="Add" />
++    <OptionsSetting value="true" id="Remove" />
++    <OptionsSetting value="true" id="Checkout" />
++    <OptionsSetting value="true" id="Update" />
++    <OptionsSetting value="true" id="Status" />
++    <OptionsSetting value="true" id="Edit" />
++    <ConfirmationsSetting value="0" id="Add" />
++    <ConfirmationsSetting value="0" id="Remove" />
++  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/build/classes" />
++  </component>
++  <component name="ProjectType">
++    <option name="id" value="Android" />
++  </component>
++</project>
+\ No newline at end of file
+Index: app/src/main/res/layout/customer_notitfication_layout.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/customer_notitfication_layout.xml	(revision )
++++ app/src/main/res/layout/customer_notitfication_layout.xml	(revision )
+@@ -0,0 +1,30 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="fill_parent"
++    android:layout_height="fill_parent"
++    android:orientation="horizontal" >
++     <ImageView android:id="@+id/icon"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        />
++     <LinearLayout android:layout_width="wrap_content"
++         android:layout_height="wrap_content"
++         android:orientation="vertical"
++         android:layout_marginLeft="10dip"
++         >
++    <TextView android:id="@+id/title"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:textColor="#286CA6"
++        android:textSize="20sp"
++        />
++    
++    <TextView android:id="@+id/text"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++         android:textColor="#6FA45E"
++         android:textSize="16sp"
++        />
++   </LinearLayout>
++
++</LinearLayout>
+\ No newline at end of file
+Index: .idea/runConfigurations.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/runConfigurations.xml	(revision )
++++ .idea/runConfigurations.xml	(revision )
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RunConfigurationProducerService">
++    <option name="ignoredProducers">
++      <set>
++        <option value="org.jetbrains.plugins.gradle.execution.test.runner.AllInPackageGradleConfigurationProducer" />
++        <option value="org.jetbrains.plugins.gradle.execution.test.runner.TestClassGradleConfigurationProducer" />
++        <option value="org.jetbrains.plugins.gradle.execution.test.runner.TestMethodGradleConfigurationProducer" />
++      </set>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: app/src/main/res/values/styles.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/styles.xml	(revision )
++++ app/src/main/res/values/styles.xml	(revision )
+@@ -0,0 +1,20 @@
++<resources>
++
++    <!-- Base application theme. -->
++    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
++        <!-- Customize your theme here. -->
++        <item name="colorPrimary">@color/colorPrimary</item>
++        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
++        <item name="colorAccent">@color/colorAccent</item>
++    </style>
++
++    <style name="AppTheme.NoActionBar">
++        <item name="windowActionBar">false</item>
++        <item name="windowNoTitle">true</item>
++    </style>
++
++    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
++
++    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
++
++</resources>
+Index: gradlew.bat
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gradlew.bat	(revision )
++++ gradlew.bat	(revision )
+@@ -0,0 +1,90 @@
++@if "%DEBUG%" == "" @echo off
++@rem ##########################################################################
++@rem
++@rem  Gradle startup script for Windows
++@rem
++@rem ##########################################################################
++
++@rem Set local scope for the variables with windows NT shell
++if "%OS%"=="Windows_NT" setlocal
++
++@rem Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
++set DEFAULT_JVM_OPTS=
++
++set DIRNAME=%~dp0
++if "%DIRNAME%" == "" set DIRNAME=.
++set APP_BASE_NAME=%~n0
++set APP_HOME=%DIRNAME%
++
++@rem Find java.exe
++if defined JAVA_HOME goto findJavaFromJavaHome
++
++set JAVA_EXE=java.exe
++%JAVA_EXE% -version >NUL 2>&1
++if "%ERRORLEVEL%" == "0" goto init
++
++echo.
++echo ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
++echo.
++echo Please set the JAVA_HOME variable in your environment to match the
++echo location of your Java installation.
++
++goto fail
++
++:findJavaFromJavaHome
++set JAVA_HOME=%JAVA_HOME:"=%
++set JAVA_EXE=%JAVA_HOME%/bin/java.exe
++
++if exist "%JAVA_EXE%" goto init
++
++echo.
++echo ERROR: JAVA_HOME is set to an invalid directory: %JAVA_HOME%
++echo.
++echo Please set the JAVA_HOME variable in your environment to match the
++echo location of your Java installation.
++
++goto fail
++
++:init
++@rem Get command-line arguments, handling Windowz variants
++
++if not "%OS%" == "Windows_NT" goto win9xME_args
++if "%@eval[2+2]" == "4" goto 4NT_args
++
++:win9xME_args
++@rem Slurp the command line arguments.
++set CMD_LINE_ARGS=
++set _SKIP=2
++
++:win9xME_args_slurp
++if "x%~1" == "x" goto execute
++
++set CMD_LINE_ARGS=%*
++goto execute
++
++:4NT_args
++@rem Get arguments from the 4NT Shell from JP Software
++set CMD_LINE_ARGS=%$
++
++:execute
++@rem Setup the command line
++
++set CLASSPATH=%APP_HOME%\gradle\wrapper\gradle-wrapper.jar
++
++@rem Execute Gradle
++"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_OPTS% "-Dorg.gradle.appname=%APP_BASE_NAME%" -classpath "%CLASSPATH%" org.gradle.wrapper.GradleWrapperMain %CMD_LINE_ARGS%
++
++:end
++@rem End local scope for the variables with windows NT shell
++if "%ERRORLEVEL%"=="0" goto mainEnd
++
++:fail
++rem Set variable GRADLE_EXIT_CONSOLE if you need the _script_ return code instead of
++rem the _cmd.exe /c_ return code!
++if  not "" == "%GRADLE_EXIT_CONSOLE%" exit 1
++exit /b 1
++
++:mainEnd
++if "%OS%"=="Windows_NT" endlocal
++
++:omega
+Index: app/src/main/res/values/style.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/style.xml	(revision )
++++ app/src/main/res/values/style.xml	(revision )
+@@ -0,0 +1,16 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources xmlns:android="http://schemas.android.com/apk/res/android">
++   <style name="push_style">
++		<item name="android:hint">@string/style_hint</item>
++		<item name="android:inputType">number</item>
++		<item name="android:textSize">14sp</item>
++	</style>
++	<style name="push_alias">
++		<item name="android:hint">@string/alias_hint</item>
++		<item name="android:textSize">14sp</item>
++	</style>
++	<style name="push_tag">
++		<item name="android:hint">@string/tag_hint</item>
++		<item name="android:textSize">14sp</item>
++	</style>
++</resources>
+\ No newline at end of file
+Index: gradle/wrapper/gradle-wrapper.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gradle/wrapper/gradle-wrapper.properties	(revision )
++++ gradle/wrapper/gradle-wrapper.properties	(revision )
+@@ -0,0 +1,6 @@
++#Wed Oct 21 11:34:03 PDT 2015
++distributionBase=GRADLE_USER_HOME
++distributionPath=wrapper/dists
++zipStoreBase=GRADLE_USER_HOME
++zipStorePath=wrapper/dists
++distributionUrl=https\://services.gradle.org/distributions/gradle-2.8-all.zip
+Index: app/src/test/java/com/example/jpushdemo/ExampleUnitTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/test/java/com/example/jpushdemo/ExampleUnitTest.java	(revision )
++++ app/src/test/java/com/example/jpushdemo/ExampleUnitTest.java	(revision )
+@@ -0,0 +1,15 @@
++package com.example.jpushdemo;
++
++import org.junit.Test;
++
++import static org.junit.Assert.*;
++
++/**
++ * To work on unit tests, switch the Test Artifact in the Build Variants view.
++ */
++public class ExampleUnitTest {
++    @Test
++    public void addition_isCorrect() throws Exception {
++        assertEquals(4, 2 + 2);
++    }
++}
+\ No newline at end of file
+Index: gradle.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gradle.properties	(revision )
++++ gradle.properties	(revision )
+@@ -0,0 +1,18 @@
++# Project-wide Gradle settings.
++
++# IDE (e.g. Android Studio) users:
++# Gradle settings configured through the IDE *will override*
++# any settings specified in this file.
++
++# For more details on how to configure your build environment visit
++# http://www.gradle.org/docs/current/userguide/build_environment.html
++
++# Specifies the JVM arguments used for the daemon process.
++# The setting is particularly useful for tweaking memory settings.
++# Default value: -Xmx10248m -XX:MaxPermSize=256m
++# org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8
++
++# When configured, Gradle will run in incubating parallel mode.
++# This option should only be used with decoupled projects. More details, visit
++# http://www.gradle.org/docs/current/userguide/multi_project_builds.html#sec:decoupled_projects
++# org.gradle.parallel=true
+\ No newline at end of file
+Index: app/src/main/res/values-zh/style.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values-zh/style.xml	(revision )
++++ app/src/main/res/values-zh/style.xml	(revision )
+@@ -0,0 +1,16 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources xmlns:android="http://schemas.android.com/apk/res/android">
++   <style name="push_style">
++		<item name="android:hint">@string/style_hint</item>
++		<item name="android:inputType">number</item>
++		<item name="android:textSize">14sp</item>
++	</style>
++	<style name="push_alias">
++		<item name="android:hint">@string/alias_hint</item>
++		<item name="android:textSize">14sp</item>
++	</style>
++	<style name="push_tag">
++		<item name="android:hint">@string/tag_hint</item>
++		<item name="android:textSize">14sp</item>
++	</style>
++</resources>
+\ No newline at end of file
+Index: app/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/.gitignore	(revision )
++++ app/.gitignore	(revision )
+@@ -0,0 +1,1 @@
++/build
+Index: app/src/main/res/drawable-hdpi/corners_bg.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/drawable-hdpi/corners_bg.xml	(revision )
++++ app/src/main/res/drawable-hdpi/corners_bg.xml	(revision )
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android">  
++    <solid android:color="#fff" />  
++    <corners android:topLeftRadius="10dp" 
++                    android:topRightRadius="10dp"  
++                android:bottomRightRadius="10dp" 
++                android:bottomLeftRadius="10dp"/>  
++</shape>
+Index: app/src/main/java/com/example/jpushdemo/SettingActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/jpushdemo/SettingActivity.java	(revision )
++++ app/src/main/java/com/example/jpushdemo/SettingActivity.java	(revision )
+@@ -0,0 +1,196 @@
++package com.example.jpushdemo;
++
++import android.content.SharedPreferences;
++import android.content.SharedPreferences.Editor;
++import android.os.Bundle;
++import android.text.TextUtils;
++import android.text.format.DateFormat;
++import android.view.KeyEvent;
++import android.view.View;
++import android.view.View.OnClickListener;
++import android.widget.Button;
++import android.widget.CheckBox;
++import android.widget.TimePicker;
++import android.widget.Toast;
++
++import java.util.HashSet;
++import java.util.Set;
++
++import cn.jpush.android.api.InstrumentedActivity;
++import cn.jpush.android.api.JPushInterface;
++
++public class SettingActivity extends InstrumentedActivity implements OnClickListener {
++	TimePicker startTime;
++	TimePicker endTime;
++	CheckBox mMonday ;
++	CheckBox mTuesday ;
++	CheckBox mWednesday;
++	CheckBox mThursday;
++	CheckBox mFriday ;
++	CheckBox mSaturday;
++	CheckBox mSunday ;
++	Button mSetTime;
++	SharedPreferences mSettings;
++	Editor mEditor;
++	
++	@Override
++	public void onCreate(Bundle icicle) {
++		super.onCreate(icicle);
++		setContentView(R.layout.set_push_time);
++		init();
++		initListener();
++	}
++	
++   @Override
++    public void onStart() {
++	    super.onStart();
++	    initData();
++   }
++   
++	private void init(){
++		startTime = (TimePicker) findViewById(R.id.start_time);
++		endTime = (TimePicker) findViewById(R.id.end_time);
++		startTime.setIs24HourView(DateFormat.is24HourFormat(this));
++		endTime.setIs24HourView(DateFormat.is24HourFormat(this));
++		mSetTime = (Button)findViewById(R.id.bu_setTime);
++		mMonday = (CheckBox)findViewById(R.id.cb_monday);
++		mTuesday = (CheckBox)findViewById(R.id.cb_tuesday);
++		mWednesday = (CheckBox)findViewById(R.id.cb_wednesday);
++	    mThursday = (CheckBox)findViewById(R.id.cb_thursday);
++		mFriday = (CheckBox)findViewById(R.id.cb_friday);
++		mSaturday = (CheckBox)findViewById(R.id.cb_saturday);
++		mSunday = (CheckBox)findViewById(R.id.cb_sunday);
++	}
++  
++    private void initListener(){
++	   mSetTime.setOnClickListener(this);
++    }
++   
++    private void initData(){
++	  mSettings = getSharedPreferences(ExampleUtil.PREFS_NAME, MODE_PRIVATE);
++	  String days = mSettings.getString(ExampleUtil.PREFS_DAYS, "");
++		if (!TextUtils.isEmpty(days)) {
++			initAllWeek(false);
++			String[] sArray = days.split(",");
++			for (String day : sArray) {
++				setWeek(day);
++			}
++		} else {
++			initAllWeek(true);
++		}
++		
++	  int startTimeStr = mSettings.getInt(ExampleUtil.PREFS_START_TIME, 0);
++	  startTime.setCurrentHour(Integer.valueOf(startTimeStr));
++	  int endTimeStr = mSettings.getInt(ExampleUtil.PREFS_END_TIME, 23);
++	  endTime.setCurrentHour(Integer.valueOf(endTimeStr));
++   }
++
++	@Override
++	public void onClick(View v) {
++		switch (v.getId()) {
++		case R.id.bu_setTime:
++			v.requestFocus();
++			v.requestFocusFromTouch();
++			setPushTime();
++			break;
++		}
++	}
++	
++	/**
++	 *设置允许接收通知时间
++	 */
++	private void setPushTime(){
++		int startime = startTime.getCurrentHour();
++		int endtime = endTime.getCurrentHour();
++		if (startime > endtime) {
++			Toast.makeText(SettingActivity.this, "开始时间不能大于结束时间", Toast.LENGTH_SHORT).show();
++			return;
++		}
++		StringBuffer daysSB = new StringBuffer();
++		Set<Integer> days = new HashSet<Integer>();
++		if (mSunday.isChecked()) {
++			days.add(0);
++			daysSB.append("0,");
++		}
++		if (mMonday.isChecked()) {
++			days.add(1);
++			daysSB.append("1,");
++		}
++		if (mTuesday.isChecked()) {
++			days.add(2);
++			daysSB.append("2,");
++		}
++		if (mWednesday.isChecked()) {
++			days.add(3);
++			daysSB.append("3,");
++		}
++		if (mThursday.isChecked()) {
++			days.add(4);
++			daysSB.append("4,");
++		}
++		if (mFriday.isChecked()) {
++			days.add(5);
++			daysSB.append("5,");
++		}
++		if (mSaturday.isChecked()) {
++			days.add(6);
++			daysSB.append("6,");
++		}
++		
++	
++		//调用JPush api设置Push时间
++		JPushInterface.setPushTime(getApplicationContext(), days, startime, endtime);
++		
++		mEditor = mSettings.edit();
++		mEditor.putString(ExampleUtil.PREFS_DAYS, daysSB.toString());
++		mEditor.putInt(ExampleUtil.PREFS_START_TIME, startime);
++		mEditor.putInt(ExampleUtil.PREFS_END_TIME, endtime);
++		mEditor.commit();
++		Toast.makeText(SettingActivity.this, R.string.setting_su, Toast.LENGTH_SHORT).show();
++	}
++
++	@Override
++	public boolean onKeyDown(int keyCode, KeyEvent event) {
++		if (keyCode == KeyEvent.KEYCODE_BACK){
++			finish();
++		}
++		return super.onKeyDown(keyCode, event);
++	}
++	
++	private void setWeek(String day){
++		   int dayId = Integer.valueOf(day);
++		   switch (dayId) {
++			case 0:
++				mSunday.setChecked(true);
++				break;
++			case 1:
++				mMonday.setChecked(true);
++				break;
++			case 2:
++				mTuesday.setChecked(true);
++				break;
++			case 3:
++				mWednesday.setChecked(true);
++				break;
++			case 4:
++				mThursday.setChecked(true);
++				break;
++			case 5:
++				mFriday.setChecked(true);
++				break;
++			case 6:
++				mSaturday.setChecked(true);
++				break;
++			}
++	   }
++	
++	private void initAllWeek(boolean isChecked) {
++		mSunday.setChecked(isChecked);
++		mMonday.setChecked(isChecked);
++		mTuesday.setChecked(isChecked);
++		mWednesday.setChecked(isChecked);
++		mThursday.setChecked(isChecked);
++		mFriday.setChecked(isChecked);
++		mSaturday.setChecked(isChecked);
++	}
++}
+\ No newline at end of file
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision )
++++ app/src/main/AndroidManifest.xml	(revision )
+@@ -0,0 +1,166 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++          package="com.example.jpushdemo"
++          android:versionCode="213"
++          android:versionName="2.1.3"
++    >
++    <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="21" />
++    <permission
++        android:name="com.example.jpushdemo.permission.JPUSH_MESSAGE"
++        android:protectionLevel="signature" />
++
++    <!-- Required  一些系统要求的权限，如访问网络等-->
++    <uses-permission android:name="com.example.jpushdemo.permission.JPUSH_MESSAGE" />
++    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
++    <uses-permission android:name="android.permission.INTERNET" />
++    <uses-permission android:name="android.permission.WAKE_LOCK" />
++    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
++    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
++    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
++    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
++    <uses-permission android:name="android.permission.VIBRATE" />
++    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
++    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
++    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
++    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
++
++
++
++    <!-- Optional for location -->
++    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
++    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
++    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
++    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
++    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
++
++    <application
++        android:icon="@drawable/ic_launcher"
++        android:allowBackup="true"
++        android:label="@string/app_name"
++        android:name="com.example.jpushdemo.ExampleApplication">
++
++
++        <!-- For test only 测试的主程序-->
++        <activity
++            android:name="com.example.jpushdemo.MainActivity"
++            android:label="@string/app_name" >
++            <intent-filter>
++                <action android:name="android.intent.action.MAIN" />
++                <category android:name="android.intent.category.LAUNCHER" />
++            </intent-filter>
++        </activity>
++        <!-- For test only 测试高级功能 -->
++        <activity android:name="com.example.jpushdemo.PushSetActivity" android:label="@string/app_name"></activity>
++        <!-- For test only 测试设置 -->
++        <activity android:name="com.example.jpushdemo.SettingActivity" android:label="@string/app_name"></activity>
++        <!-- For test only 测试状态通知栏，需要打开的Activity -->
++        <activity android:name="com.example.jpushdemo.TestActivity" android:exported="false">
++            <intent-filter>
++                <action android:name="jpush.testAction" />
++                <category android:name="jpush.testCategory" />
++            </intent-filter>
++        </activity>
++
++        <!-- Rich push 核心功能 since 2.0.6-->
++        <activity
++            android:name="cn.jpush.android.ui.PopWinActivity"
++            android:theme="@style/MyDialogStyle"
++            android:exported="false">
++        </activity>
++
++        <!-- Required SDK核心功能-->
++        <activity
++            android:name="cn.jpush.android.ui.PushActivity"
++            android:configChanges="orientation|keyboardHidden"
++            android:theme="@android:style/Theme.NoTitleBar"
++            android:exported="false">
++            <intent-filter>
++                <action android:name="cn.jpush.android.ui.PushActivity" />
++                <category android:name="android.intent.category.DEFAULT" />
++                <category android:name="com.example.jpushdemo" />
++            </intent-filter>
++        </activity>
++        <!-- Required  SDK核心功能-->
++        <service
++            android:name="cn.jpush.android.service.DownloadService"
++            android:enabled="true"
++            android:exported="false" >
++        </service>
++
++
++        <!-- Required SDK 核心功能-->
++        <!-- 可配置android:process参数将PushService放在其他进程中 -->
++        <service
++            android:name="cn.jpush.android.service.PushService"
++            android:enabled="true"
++            android:exported="false">
++            <intent-filter>
++                <action android:name="cn.jpush.android.intent.REGISTER" />
++                <action android:name="cn.jpush.android.intent.REPORT" />
++                <action android:name="cn.jpush.android.intent.PushService" />
++                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
++            </intent-filter>
++        </service>
++
++        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
++        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
++        <service
++            android:name="cn.jpush.android.service.DaemonService"
++            android:enabled="true"
++            android:exported="true">
++            <intent-filter>
++                <action android:name="cn.jpush.android.intent.DaemonService" />
++                <category android:name="com.example.jpushdemo" />
++            </intent-filter>
++
++        </service>
++
++        <!-- Required SDK核心功能-->
++        <receiver
++            android:name="cn.jpush.android.service.PushReceiver"
++            android:enabled="true"
++            android:exported="false">
++            <intent-filter android:priority="1000">
++                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
++                <category android:name="com.example.jpushdemo" />
++            </intent-filter>
++            <intent-filter>
++                <action android:name="android.intent.action.USER_PRESENT" />
++                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
++            </intent-filter>
++            <!-- Optional -->
++            <intent-filter>
++                <action android:name="android.intent.action.PACKAGE_ADDED" />
++                <action android:name="android.intent.action.PACKAGE_REMOVED" />
++                <data android:scheme="package" />
++            </intent-filter>
++
++        </receiver>
++
++        <!-- Required SDK核心功能-->
++        <receiver android:name="cn.jpush.android.service.AlarmReceiver" android:exported="false"/>
++
++        <!-- User defined.  For test only  用户自定义的广播接收器-->
++        <receiver
++            android:name="com.example.jpushdemo.MyReceiver"
++            android:exported="false"
++            android:enabled="true">
++            <intent-filter>
++                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
++                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
++                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
++                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
++                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
++                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> <!--Optional 用户接受Rich Push Javascript 回调函数的intent-->
++                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
++                <category android:name="com.example.jpushdemo" />
++            </intent-filter>
++        </receiver>
++
++
++        <!-- Required  . Enable it you can get statistics data with channel -->
++        <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
++        <meta-data android:name="JPUSH_APPKEY" android:value="64ef53e216f0d7c4d5b264bb" /> <!--  </>值来自开发者平台取得的AppKey-->
++
++    </application>
++</manifest>
+\ No newline at end of file
+Index: app/src/main/java/com/example/jpushdemo/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/jpushdemo/MainActivity.java	(revision )
++++ app/src/main/java/com/example/jpushdemo/MainActivity.java	(revision )
+@@ -0,0 +1,160 @@
++package com.example.jpushdemo;
++
++
++import android.content.BroadcastReceiver;
++import android.content.Context;
++import android.content.Intent;
++import android.content.IntentFilter;
++import android.os.Bundle;
++import android.view.View;
++import android.view.View.OnClickListener;
++import android.widget.Button;
++import android.widget.EditText;
++import android.widget.TextView;
++import cn.jpush.android.api.InstrumentedActivity;
++import cn.jpush.android.api.JPushInterface;
++
++
++
++
++public class MainActivity extends InstrumentedActivity implements OnClickListener{
++
++	private Button mInit;
++	private Button mSetting;
++	private Button mStopPush;
++	private Button mResumePush;
++	private EditText msgText;
++	
++	public static boolean isForeground = false;
++	@Override
++	public void onCreate(Bundle savedInstanceState) {
++		super.onCreate(savedInstanceState);
++		setContentView(R.layout.main);
++		initView();   
++		registerMessageReceiver();  // used for receive msg
++	}
++	
++	private void initView(){
++		TextView mImei = (TextView) findViewById(R.id.tv_imei);
++		String udid =  ExampleUtil.getImei(getApplicationContext(), "");
++        if (null != udid) mImei.setText("IMEI: " + udid);
++        
++		TextView mAppKey = (TextView) findViewById(R.id.tv_appkey);
++		String appKey = ExampleUtil.getAppKey(getApplicationContext());
++		if (null == appKey) appKey = "AppKey异常";
++		mAppKey.setText("AppKey: " + appKey);
++
++		String packageName =  getPackageName();
++		TextView mPackage = (TextView) findViewById(R.id.tv_package);
++		mPackage.setText("PackageName: " + packageName);
++
++		String deviceId = ExampleUtil.getDeviceId(getApplicationContext());
++		TextView mDeviceId = (TextView) findViewById(R.id.tv_device_id);
++		mDeviceId.setText("deviceId:" + deviceId);
++		
++		String versionName =  ExampleUtil.GetVersion(getApplicationContext());
++		TextView mVersion = (TextView) findViewById(R.id.tv_version);
++		mVersion.setText("Version: " + versionName);
++		
++	    mInit = (Button)findViewById(R.id.init);
++		mInit.setOnClickListener(this);
++		
++		mStopPush = (Button)findViewById(R.id.stopPush);
++		mStopPush.setOnClickListener(this);
++		
++		mResumePush = (Button)findViewById(R.id.resumePush);
++		mResumePush.setOnClickListener(this);
++		
++		mSetting = (Button)findViewById(R.id.setting);
++		mSetting.setOnClickListener(this);
++		
++		msgText = (EditText)findViewById(R.id.msg_rec);
++	}
++
++	
++	@Override
++	public void onClick(View v) {
++		switch (v.getId()) {
++		case R.id.init:
++			init();
++			break;
++		case R.id.setting:
++			Intent intent = new Intent(MainActivity.this, PushSetActivity.class);
++			startActivity(intent);
++			break;
++		case R.id.stopPush:
++			JPushInterface.stopPush(getApplicationContext());
++			break;
++		case R.id.resumePush:
++			JPushInterface.resumePush(getApplicationContext());
++			break;
++		}
++	}
++	
++	// 初始化 JPush。如果已经初始化，但没有登录成功，则执行重新登录。
++	private void init(){
++		 JPushInterface.init(getApplicationContext());
++	}
++
++
++	@Override
++	protected void onResume() {
++		isForeground = true;
++		super.onResume();
++	}
++
++
++	@Override
++	protected void onPause() {
++		isForeground = false;
++		super.onPause();
++	}
++
++
++	@Override
++	protected void onDestroy() {
++		unregisterReceiver(mMessageReceiver);
++		super.onDestroy();
++	}
++	
++
++	//for receive customer msg from jpush server
++	private MessageReceiver mMessageReceiver;
++	public static final String MESSAGE_RECEIVED_ACTION = "com.example.jpushdemo.MESSAGE_RECEIVED_ACTION";
++	public static final String KEY_TITLE = "title";
++	public static final String KEY_MESSAGE = "message";
++	public static final String KEY_EXTRAS = "extras";
++	
++	public void registerMessageReceiver() {
++		mMessageReceiver = new MessageReceiver();
++		IntentFilter filter = new IntentFilter();
++		filter.setPriority(IntentFilter.SYSTEM_HIGH_PRIORITY);
++		filter.addAction(MESSAGE_RECEIVED_ACTION);
++		registerReceiver(mMessageReceiver, filter);
++	}
++
++	public class MessageReceiver extends BroadcastReceiver {
++
++		@Override
++		public void onReceive(Context context, Intent intent) {
++			if (MESSAGE_RECEIVED_ACTION.equals(intent.getAction())) {
++              String messge = intent.getStringExtra(KEY_MESSAGE);
++              String extras = intent.getStringExtra(KEY_EXTRAS);
++              StringBuilder showMsg = new StringBuilder();
++              showMsg.append(KEY_MESSAGE + " : " + messge + "\n");
++              if (!ExampleUtil.isEmpty(extras)) {
++            	  showMsg.append(KEY_EXTRAS + " : " + extras + "\n");
++              }
++              setCostomMsg(showMsg.toString());
++			}
++		}
++	}
++	
++	private void setCostomMsg(String msg){
++		 if (null != msgText) {
++			 msgText.setText(msg);
++			 msgText.setVisibility(View.VISIBLE);
++         }
++	}
++
++}
+\ No newline at end of file
+Index: app/src/androidTest/java/com/example/jpushdemo/ApplicationTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/androidTest/java/com/example/jpushdemo/ApplicationTest.java	(revision )
++++ app/src/androidTest/java/com/example/jpushdemo/ApplicationTest.java	(revision )
+@@ -0,0 +1,13 @@
++package com.example.jpushdemo;
++
++import android.app.Application;
++import android.test.ApplicationTestCase;
++
++/**
++ * <a href="http://d.android.com/tools/testing/testing_android.html">Testing Fundamentals</a>
++ */
++public class ApplicationTest extends ApplicationTestCase<Application> {
++    public ApplicationTest() {
++        super(Application.class);
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/layout/customer_notitfication_layout_one.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/customer_notitfication_layout_one.xml	(revision )
++++ app/src/main/res/layout/customer_notitfication_layout_one.xml	(revision )
+@@ -0,0 +1,29 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="fill_parent"
++    android:layout_height="fill_parent"
++    android:orientation="horizontal" >
++    <ImageView
++        android:id="@+id/m_icon"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content" />
++    <LinearLayout
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginLeft="10dip"
++        android:orientation="vertical" >
++        <TextView
++            android:id="@+id/m_title"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:textColor="#A4C638"
++            android:textSize="10sp" />
++        <TextView
++            android:id="@+id/m_text"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:textColor="#FFB6FF"
++            android:textSize="20sp" />
++    </LinearLayout>
++
++</LinearLayout>
+\ No newline at end of file
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- build.gradle	(revision )
++++ build.gradle	(revision )
+@@ -0,0 +1,23 @@
++// Top-level build file where you can add configuration options common to all sub-projects/modules.
++
++buildscript {
++    repositories {
++        jcenter()
++    }
++    dependencies {
++        classpath 'com.android.tools.build:gradle:1.5.0'
++
++        // NOTE: Do not place your application dependencies here; they belong
++        // in the individual module build.gradle files
++    }
++}
++
++allprojects {
++    repositories {
++        jcenter()
++    }
++}
++
++task clean(type: Delete) {
++    delete rootProject.buildDir
++}
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/gradle.xml	(revision )
++++ .idea/gradle.xml	(revision )
+@@ -0,0 +1,18 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="GradleSettings">
++    <option name="linkedExternalProjectsSettings">
++      <GradleProjectSettings>
++        <option name="distributionType" value="DEFAULT_WRAPPED" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="gradleJvm" value="1.8" />
++        <option name="modules">
++          <set>
++            <option value="$PROJECT_DIR$" />
++            <option value="$PROJECT_DIR$/app" />
++          </set>
++        </option>
++      </GradleProjectSettings>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: app/src/main/res/values-v21/styles.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values-v21/styles.xml	(revision )
++++ app/src/main/res/values-v21/styles.xml	(revision )
+@@ -0,0 +1,9 @@
++<resources>>
++
++    <style name="AppTheme.NoActionBar">
++        <item name="windowActionBar">false</item>
++        <item name="windowNoTitle">true</item>
++        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
++        <item name="android:statusBarColor">@android:color/transparent</item>
++    </style>
++</resources>
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/strings.xml	(revision )
++++ app/src/main/res/values/strings.xml	(revision )
+@@ -0,0 +1,4 @@
++<resources>
++    <string name="app_name">JPushDemo</string>
++    <string name="action_settings">Settings</string>
++</resources>
+Index: gradlew
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gradlew	(revision )
++++ gradlew	(revision )
+@@ -0,0 +1,160 @@
++#!/usr/bin/env bash
++
++##############################################################################
++##
++##  Gradle start up script for UN*X
++##
++##############################################################################
++
++# Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
++DEFAULT_JVM_OPTS=""
++
++APP_NAME="Gradle"
++APP_BASE_NAME=`basename "$0"`
++
++# Use the maximum available, or set MAX_FD != -1 to use that value.
++MAX_FD="maximum"
++
++warn ( ) {
++    echo "$*"
++}
++
++die ( ) {
++    echo
++    echo "$*"
++    echo
++    exit 1
++}
++
++# OS specific support (must be 'true' or 'false').
++cygwin=false
++msys=false
++darwin=false
++case "`uname`" in
++  CYGWIN* )
++    cygwin=true
++    ;;
++  Darwin* )
++    darwin=true
++    ;;
++  MINGW* )
++    msys=true
++    ;;
++esac
++
++# Attempt to set APP_HOME
++# Resolve links: $0 may be a link
++PRG="$0"
++# Need this for relative symlinks.
++while [ -h "$PRG" ] ; do
++    ls=`ls -ld "$PRG"`
++    link=`expr "$ls" : '.*-> \(.*\)$'`
++    if expr "$link" : '/.*' > /dev/null; then
++        PRG="$link"
++    else
++        PRG=`dirname "$PRG"`"/$link"
++    fi
++done
++SAVED="`pwd`"
++cd "`dirname \"$PRG\"`/" >/dev/null
++APP_HOME="`pwd -P`"
++cd "$SAVED" >/dev/null
++
++CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar
++
++# Determine the Java command to use to start the JVM.
++if [ -n "$JAVA_HOME" ] ; then
++    if [ -x "$JAVA_HOME/jre/sh/java" ] ; then
++        # IBM's JDK on AIX uses strange locations for the executables
++        JAVACMD="$JAVA_HOME/jre/sh/java"
++    else
++        JAVACMD="$JAVA_HOME/bin/java"
++    fi
++    if [ ! -x "$JAVACMD" ] ; then
++        die "ERROR: JAVA_HOME is set to an invalid directory: $JAVA_HOME
++
++Please set the JAVA_HOME variable in your environment to match the
++location of your Java installation."
++    fi
++else
++    JAVACMD="java"
++    which java >/dev/null 2>&1 || die "ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
++
++Please set the JAVA_HOME variable in your environment to match the
++location of your Java installation."
++fi
++
++# Increase the maximum file descriptors if we can.
++if [ "$cygwin" = "false" -a "$darwin" = "false" ] ; then
++    MAX_FD_LIMIT=`ulimit -H -n`
++    if [ $? -eq 0 ] ; then
++        if [ "$MAX_FD" = "maximum" -o "$MAX_FD" = "max" ] ; then
++            MAX_FD="$MAX_FD_LIMIT"
++        fi
++        ulimit -n $MAX_FD
++        if [ $? -ne 0 ] ; then
++            warn "Could not set maximum file descriptor limit: $MAX_FD"
++        fi
++    else
++        warn "Could not query maximum file descriptor limit: $MAX_FD_LIMIT"
++    fi
++fi
++
++# For Darwin, add options to specify how the application appears in the dock
++if $darwin; then
++    GRADLE_OPTS="$GRADLE_OPTS \"-Xdock:name=$APP_NAME\" \"-Xdock:icon=$APP_HOME/media/gradle.icns\""
++fi
++
++# For Cygwin, switch paths to Windows format before running java
++if $cygwin ; then
++    APP_HOME=`cygpath --path --mixed "$APP_HOME"`
++    CLASSPATH=`cygpath --path --mixed "$CLASSPATH"`
++    JAVACMD=`cygpath --unix "$JAVACMD"`
++
++    # We build the pattern for arguments to be converted via cygpath
++    ROOTDIRSRAW=`find -L / -maxdepth 1 -mindepth 1 -type d 2>/dev/null`
++    SEP=""
++    for dir in $ROOTDIRSRAW ; do
++        ROOTDIRS="$ROOTDIRS$SEP$dir"
++        SEP="|"
++    done
++    OURCYGPATTERN="(^($ROOTDIRS))"
++    # Add a user-defined pattern to the cygpath arguments
++    if [ "$GRADLE_CYGPATTERN" != "" ] ; then
++        OURCYGPATTERN="$OURCYGPATTERN|($GRADLE_CYGPATTERN)"
++    fi
++    # Now convert the arguments - kludge to limit ourselves to /bin/sh
++    i=0
++    for arg in "$@" ; do
++        CHECK=`echo "$arg"|egrep -c "$OURCYGPATTERN" -`
++        CHECK2=`echo "$arg"|egrep -c "^-"`                                 ### Determine if an option
++
++        if [ $CHECK -ne 0 ] && [ $CHECK2 -eq 0 ] ; then                    ### Added a condition
++            eval `echo args$i`=`cygpath --path --ignore --mixed "$arg"`
++        else
++            eval `echo args$i`="\"$arg\""
++        fi
++        i=$((i+1))
++    done
++    case $i in
++        (0) set -- ;;
++        (1) set -- "$args0" ;;
++        (2) set -- "$args0" "$args1" ;;
++        (3) set -- "$args0" "$args1" "$args2" ;;
++        (4) set -- "$args0" "$args1" "$args2" "$args3" ;;
++        (5) set -- "$args0" "$args1" "$args2" "$args3" "$args4" ;;
++        (6) set -- "$args0" "$args1" "$args2" "$args3" "$args4" "$args5" ;;
++        (7) set -- "$args0" "$args1" "$args2" "$args3" "$args4" "$args5" "$args6" ;;
++        (8) set -- "$args0" "$args1" "$args2" "$args3" "$args4" "$args5" "$args6" "$args7" ;;
++        (9) set -- "$args0" "$args1" "$args2" "$args3" "$args4" "$args5" "$args6" "$args7" "$args8" ;;
++    esac
++fi
++
++# Split up the JVM_OPTS And GRADLE_OPTS values into an array, following the shell quoting and substitution rules
++function splitJvmOpts() {
++    JVM_OPTS=("$@")
++}
++eval splitJvmOpts $DEFAULT_JVM_OPTS $JAVA_OPTS $GRADLE_OPTS
++JVM_OPTS[${#JVM_OPTS[*]}]="-Dorg.gradle.appname=$APP_BASE_NAME"
++
++exec "$JAVACMD" "${JVM_OPTS[@]}" -classpath "$CLASSPATH" org.gradle.wrapper.GradleWrapperMain "$@"
+Index: app/src/main/java/com/example/jpushdemo/TestActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/jpushdemo/TestActivity.java	(revision )
++++ app/src/main/java/com/example/jpushdemo/TestActivity.java	(revision )
+@@ -0,0 +1,27 @@
++package com.example.jpushdemo;
++
++import cn.jpush.android.api.JPushInterface;
++import android.app.Activity;
++import android.content.Intent;
++import android.os.Bundle;
++import android.view.ViewGroup.LayoutParams;
++import android.widget.TextView;
++
++public class TestActivity extends Activity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        TextView tv = new TextView(this);
++        tv.setText("用户自定义打开的Activity");
++        Intent intent = getIntent();
++        if (null != intent) {
++	        Bundle bundle = getIntent().getExtras();
++	        String title = bundle.getString(JPushInterface.EXTRA_NOTIFICATION_TITLE);
++	        String content = bundle.getString(JPushInterface.EXTRA_ALERT);
++	        tv.setText("Title : " + title + "  " + "Content : " + content);
++        }
++        addContentView(tv, new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
++    }
++
++}
+Index: app/src/main/res/drawable-hdpi/richpush_btn_selector.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/drawable-hdpi/richpush_btn_selector.xml	(revision )
++++ app/src/main/res/drawable-hdpi/richpush_btn_selector.xml	(revision )
+@@ -0,0 +1,21 @@
++<?xml version="1.0" encoding="utf-8"?> 
++<selector xmlns:android="http://schemas.android.com/apk/res/android" > 
++    <!-- 获得焦点但未按下时的背景图片 --> 
++    <item 
++        android:state_focused="true" 
++        android:state_enabled="true" 
++        android:state_pressed="false" 
++        android:drawable="@drawable/ic_richpush_actionbar_back" /> 
++     <!-- 按下时的背景图片 --> 
++    <item 
++        android:state_enabled="true" 
++        android:state_pressed="true" 
++        android:drawable="@android:color/darker_gray" /> 
++    <!-- 按下时的背景图片 --> 
++    <item 
++        android:state_enabled="true" 
++        android:state_checked="true" 
++        android:drawable="@android:color/darker_gray" /> 
++    <!-- 默认时的背景图片 --> 
++    <item android:drawable="@drawable/ic_richpush_actionbar_back" /> 
++</selector> 
+\ No newline at end of file
+Index: app/src/main/java/com/example/jpushdemo/MyReceiver.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/jpushdemo/MyReceiver.java	(revision )
++++ app/src/main/java/com/example/jpushdemo/MyReceiver.java	(revision )
+@@ -0,0 +1,122 @@
++package com.example.jpushdemo;
++
++import android.content.BroadcastReceiver;
++import android.content.Context;
++import android.content.Intent;
++import android.os.Bundle;
++import android.util.Log;
++
++import org.json.JSONException;
++import org.json.JSONObject;
++
++import java.util.Iterator;
++
++import cn.jpush.android.api.JPushInterface;
++
++/**
++ * 自定义接收器
++ * 
++ * 如果不定义这个 Receiver，则：
++ * 1) 默认用户会打开主界面
++ * 2) 接收不到自定义消息
++ */
++public class MyReceiver extends BroadcastReceiver {
++	private static final String TAG = "JPush";
++
++	@Override
++	public void onReceive(Context context, Intent intent) {
++        Bundle bundle = intent.getExtras();
++		Log.d(TAG, "[MyReceiver] onReceive - " + intent.getAction() + ", extras: " + printBundle(bundle));
++		
++        if (JPushInterface.ACTION_REGISTRATION_ID.equals(intent.getAction())) {
++            String regId = bundle.getString(JPushInterface.EXTRA_REGISTRATION_ID);
++            Log.d(TAG, "[MyReceiver] 接收Registration Id : " + regId);
++            //send the Registration Id to your server...
++                        
++        } else if (JPushInterface.ACTION_MESSAGE_RECEIVED.equals(intent.getAction())) {
++        	Log.d(TAG, "[MyReceiver] 接收到推送下来的自定义消息: " + bundle.getString(JPushInterface.EXTRA_MESSAGE));
++        	processCustomMessage(context, bundle);
++        
++        } else if (JPushInterface.ACTION_NOTIFICATION_RECEIVED.equals(intent.getAction())) {
++            Log.d(TAG, "[MyReceiver] 接收到推送下来的通知");
++            int notifactionId = bundle.getInt(JPushInterface.EXTRA_NOTIFICATION_ID);
++            Log.d(TAG, "[MyReceiver] 接收到推送下来的通知的ID: " + notifactionId);
++        	
++        } else if (JPushInterface.ACTION_NOTIFICATION_OPENED.equals(intent.getAction())) {
++            Log.d(TAG, "[MyReceiver] 用户点击打开了通知");
++            
++        	//打开自定义的Activity
++        	Intent i = new Intent(context, TestActivity.class);
++        	i.putExtras(bundle);
++        	//i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
++        	i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP );
++        	context.startActivity(i);
++        	
++        } else if (JPushInterface.ACTION_RICHPUSH_CALLBACK.equals(intent.getAction())) {
++            Log.d(TAG, "[MyReceiver] 用户收到到RICH PUSH CALLBACK: " + bundle.getString(JPushInterface.EXTRA_EXTRA));
++            //在这里根据 JPushInterface.EXTRA_EXTRA 的内容处理代码，比如打开新的Activity， 打开一个网页等..
++        	
++        } else if(JPushInterface.ACTION_CONNECTION_CHANGE.equals(intent.getAction())) {
++        	boolean connected = intent.getBooleanExtra(JPushInterface.EXTRA_CONNECTION_CHANGE, false);
++        	Log.w(TAG, "[MyReceiver]" + intent.getAction() +" connected state change to "+connected);
++        } else {
++        	Log.d(TAG, "[MyReceiver] Unhandled intent - " + intent.getAction());
++        }
++	}
++
++	// 打印所有的 intent extra 数据
++	private static String printBundle(Bundle bundle) {
++		StringBuilder sb = new StringBuilder();
++		for (String key : bundle.keySet()) {
++			if (key.equals(JPushInterface.EXTRA_NOTIFICATION_ID)) {
++				sb.append("\nkey:" + key + ", value:" + bundle.getInt(key));
++			}else if(key.equals(JPushInterface.EXTRA_CONNECTION_CHANGE)){
++				sb.append("\nkey:" + key + ", value:" + bundle.getBoolean(key));
++			} else if (key.equals(JPushInterface.EXTRA_EXTRA)) {
++				if (bundle.getString(JPushInterface.EXTRA_EXTRA).isEmpty()) {
++					Log.i(TAG, "This message has no Extra data");
++					continue;
++				}
++
++				try {
++					JSONObject json = new JSONObject(bundle.getString(JPushInterface.EXTRA_EXTRA));
++					Iterator<String> it =  json.keys();
++
++					while (it.hasNext()) {
++						String myKey = it.next().toString();
++						sb.append("\nkey:" + key + ", value: [" +
++								myKey + " - " +json.optString(myKey) + "]");
++					}
++				} catch (JSONException e) {
++					Log.e(TAG, "Get message extra JSON error!");
++				}
++
++			} else {
++				sb.append("\nkey:" + key + ", value:" + bundle.getString(key));
++			}
++		}
++		return sb.toString();
++	}
++	
++	//send msg to MainActivity
++	private void processCustomMessage(Context context, Bundle bundle) {
++		if (MainActivity.isForeground) {
++			String message = bundle.getString(JPushInterface.EXTRA_MESSAGE);
++			String extras = bundle.getString(JPushInterface.EXTRA_EXTRA);
++			Intent msgIntent = new Intent(MainActivity.MESSAGE_RECEIVED_ACTION);
++			msgIntent.putExtra(MainActivity.KEY_MESSAGE, message);
++			if (!ExampleUtil.isEmpty(extras)) {
++				try {
++					JSONObject extraJson = new JSONObject(extras);
++					if (null != extraJson && extraJson.length() > 0) {
++						msgIntent.putExtra(MainActivity.KEY_EXTRAS, extras);
++					}
++				} catch (JSONException e) {
++
++				}
++
++			}
++			context.sendBroadcast(msgIntent);
++		}
++	}
++}
+Index: app/src/main/java/com/example/jpushdemo/ExampleApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/jpushdemo/ExampleApplication.java	(revision )
++++ app/src/main/java/com/example/jpushdemo/ExampleApplication.java	(revision )
+@@ -0,0 +1,23 @@
++package com.example.jpushdemo;
++
++import android.app.Application;
++import android.util.Log;
++import cn.jpush.android.api.JPushInterface;
++
++/**
++ * For developer startup JPush SDK
++ * 
++ * 一般建议在自定义 Application 类里初始化。也可以在主 Activity 里。
++ */
++public class ExampleApplication extends Application {
++    private static final String TAG = "JPush";
++
++    @Override
++    public void onCreate() {    	     
++    	 Log.d(TAG, "[ExampleApplication] onCreate");
++         super.onCreate();
++         
++         JPushInterface.setDebugMode(true); 	// 设置开启日志,发布时请关闭日志
++         JPushInterface.init(this);     		// 初始化 JPush
++    }
++}
+Index: .idea/copyright/profiles_settings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/copyright/profiles_settings.xml	(revision )
++++ .idea/copyright/profiles_settings.xml	(revision )
+@@ -0,0 +1,3 @@
++<component name="CopyrightManager">
++  <settings default="" />
++</component>
+\ No newline at end of file
+Index: app/src/main/res/layout/push_set_dialog.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/push_set_dialog.xml	(revision )
++++ app/src/main/res/layout/push_set_dialog.xml	(revision )
+@@ -0,0 +1,163 @@
++<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
++    android:id="@+id/layout_root"
++    android:layout_width="fill_parent"
++    android:layout_height="fill_parent"
++    android:background="@drawable/tiledstripes" >
++
++    <LinearLayout  android:layout_width="fill_parent"
++        android:layout_height="fill_parent"
++        android:focusable="true"
++        android:focusableInTouchMode="true"
++        android:orientation="vertical"
++        android:padding="20dip" >
++
++        <LinearLayout
++            android:layout_width="fill_parent"
++            android:layout_height="fill_parent"
++            android:background="#9C9C9C"
++            android:orientation="vertical"
++            android:padding="10dip" >
++
++         <TextView
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:text="设置Tag和Alias "
++                android:textColor="#000" />
++        </LinearLayout>
++
++        <LinearLayout
++            android:layout_width="fill_parent"
++            android:layout_height="fill_parent"
++            android:layout_marginTop="10dip"
++            android:background="@drawable/corners_bg"
++            android:orientation="vertical"
++            android:paddingBottom="20dip"
++            android:paddingTop="20dip" >
++
++            <LinearLayout
++                android:layout_width="fill_parent"
++                android:layout_height="fill_parent"
++                android:orientation="horizontal" >
++
++                <TextView
++                    android:layout_width="wrap_content"
++                    android:layout_height="wrap_content"
++                    android:text=" Tag :" />
++
++                <EditText
++                    android:id="@+id/et_tag"
++                    style="@style/push_tag"
++                    android:layout_width="160dip"
++                    android:layout_height="wrap_content"
++                    android:textColor="#000000"
++                    android:layout_marginLeft="5dip"
++                    android:layout_marginRight="5dip"
++                    android:textSize="15sp" />
++
++                <Button
++                    android:id="@+id/bt_tag"
++                    android:layout_width="wrap_content"
++                    android:layout_height="wrap_content"
++                    android:text="设置Tag  "
++                    android:textSize="12sp" />
++            </LinearLayout>
++
++            <LinearLayout
++                android:layout_width="fill_parent"
++                android:layout_height="fill_parent"
++                android:orientation="horizontal" >
++
++                <TextView
++                    android:layout_width="wrap_content"
++                    android:layout_height="wrap_content"
++                    android:text="Alias:" />
++
++                <EditText
++                    android:id="@+id/et_alias"
++                    style="@style/push_alias"
++                    android:layout_width="160dip"
++                    android:layout_height="wrap_content"
++                    android:layout_marginLeft="5dip"
++                    android:layout_marginRight="5dip"
++                    android:textColor="#000000"
++                    android:textSize="15sp" />
++
++                <Button
++                    android:id="@+id/bt_alias"
++                    android:layout_width="wrap_content"
++                    android:layout_height="wrap_content"
++                    android:text="设置Alias"
++                    android:textSize="12sp" />
++            </LinearLayout>
++        </LinearLayout>
++
++        <LinearLayout
++            android:layout_width="fill_parent"
++            android:layout_height="fill_parent"
++            android:layout_marginTop="10dip"
++            android:background="#9C9C9C"
++            android:orientation="vertical"
++             android:padding="10dip" >
++
++            <TextView
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:text="定制通知栏样式"
++                android:textColor="#000" />
++        </LinearLayout>
++
++        <LinearLayout
++            android:layout_width="fill_parent"
++            android:layout_height="fill_parent"
++            android:layout_marginTop="10dip"
++            android:background="@drawable/corners_bg"
++            android:orientation="vertical"
++            android:paddingBottom="10dip"
++            android:paddingTop="10dip" >
++
++            <Button
++                android:id="@+id/setStyle1"
++                android:layout_width="fill_parent"
++                android:layout_height="wrap_content"
++                android:text="定制通知栏样式：Basic" />
++
++            <Button
++                android:id="@+id/setStyle2"
++                android:layout_width="fill_parent"
++                android:layout_height="wrap_content"
++                android:text="定制通知栏样式：Custom" />
++        </LinearLayout>
++
++        <LinearLayout
++            android:layout_width="fill_parent"
++            android:layout_height="fill_parent"
++            android:layout_marginTop="10dip"
++            android:background="#9C9C9C"
++            android:orientation="vertical"
++            android:padding="10dip"
++            >
++            <TextView
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:text="设置"
++                android:textColor="#000" />
++        </LinearLayout>
++
++        <LinearLayout
++            android:layout_width="fill_parent"
++            android:layout_height="fill_parent"
++            android:layout_marginTop="10dip"
++            android:background="@drawable/corners_bg"
++            android:orientation="vertical"
++            android:paddingBottom="10dip"
++            android:paddingTop="10dip" >
++            <Button
++                android:id="@+id/bu_setTime"
++                android:layout_width="fill_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginTop="20dip"
++                android:text="设置接收push时间" />
++        </LinearLayout>
++    </LinearLayout>
++
++</ScrollView>
+\ No newline at end of file
+Index: app/src/main/res/values-zh/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values-zh/strings.xml	(revision )
++++ app/src/main/res/values-zh/strings.xml	(revision )
+@@ -0,0 +1,15 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <string name="hello">Hello World, JPush!</string>
++    <string name="app_name">JPush SDK Demo</string>
++    <string name="tag_hint">Tag can be number, alphabet, underscore, Chinese. Use , to split many tags.</string>
++    <string name="alias_hint">Alias can be number, alphabet, underscore, Chinese.</string>
++    <string name="style_hint">style should be number</string>
++    <string name="error_style_empty">style cannot be empty</string>
++    <string name="error_alias_empty">alias cannot be empty</string>
++    <string name="error_tag_empty">tag cannot be empty</string>
++    <string name="error_tag_gs_empty">Invalid format</string>
++    <string name="error_network">Failed to init due to network exception.</string>
++    <string name="logining">Running in background. Please see log.</string>
++    <string name="setting_su">Succeed to set</string>
++</resources>
+Index: settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- settings.gradle	(revision )
++++ settings.gradle	(revision )
+@@ -0,0 +1,1 @@
++include ':app'
+Index: app/src/main/res/menu/menu_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/menu/menu_main.xml	(revision )
++++ app/src/main/res/menu/menu_main.xml	(revision )
+@@ -0,0 +1,10 @@
++<menu xmlns:android="http://schemas.android.com/apk/res/android"
++      xmlns:app="http://schemas.android.com/apk/res-auto"
++      xmlns:tools="http://schemas.android.com/tools"
++      tools:context="com.example.jpushdemo.MainActivity">
++    <item
++        android:id="@+id/action_settings"
++        android:orderInCategory="100"
++        android:title="@string/action_settings"
++        app:showAsAction="never"/>
++</menu>
+Index: app/src/main/res/values/jpush_style.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/jpush_style.xml	(revision )
++++ app/src/main/res/values/jpush_style.xml	(revision )
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources xmlns:android="http://schemas.android.com/apk/res/android">
++    <style name="MyDialogStyle">
++        <item name="android:windowBackground">@android:color/transparent</item>
++        <item name="android:windowFrame">@null</item>
++        <item name="android:windowNoTitle">true</item>
++        <item name="android:windowIsFloating">true</item>
++        <item name="android:windowIsTranslucent">true</item>
++        <item name="android:windowContentOverlay">@null</item>
++        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
++        <item name="android:backgroundDimEnabled">true</item>
++    </style>
++</resources>
+\ No newline at end of file
+Index: app/src/main/res/layout/jpush_webview_layout.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/jpush_webview_layout.xml	(revision )
++++ app/src/main/res/layout/jpush_webview_layout.xml	(revision )
+@@ -0,0 +1,51 @@
++<?xml version="1.0" encoding="utf-8"?>
++<cn.jpush.android.ui.FullScreenView xmlns:android="http://schemas.android.com/apk/res/android"
++    android:id="@+id/actionbarLayoutId"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:orientation="vertical" >
++
++    <RelativeLayout
++        android:id="@+id/rlRichpushTitleBar"
++        android:layout_width="match_parent"
++        android:layout_height="40.0dp"
++        android:background="#29313a">
++
++        <ImageButton
++            android:id="@+id/imgRichpushBtnBack"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_centerVertical="true"
++            android:layout_marginLeft="9dp"
++            android:layout_marginRight="10dp"
++            android:background="@drawable/richpush_btn_selector" />
++
++        <ImageView
++            android:id="@+id/imgView"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_centerVertical="true"
++            android:layout_toRightOf="@id/imgRichpushBtnBack"
++            android:clickable="false"
++            android:src="@drawable/ic_richpush_actionbar_divider" />
++
++        <TextView
++            android:id="@+id/tvRichpushTitle"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_centerVertical="true"
++            android:layout_marginLeft="7dp"
++            android:layout_toRightOf="@id/imgView"
++            android:clickable="false"
++            android:text=" "
++            android:textSize="20sp"
++            android:textColor="#ffffff" />
++    </RelativeLayout>
++
++    <WebView
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:id="@+id/fullWebView"
++        android:background="#000000" />
++
++</cn.jpush.android.ui.FullScreenView>
+\ No newline at end of file
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build.gradle	(revision )
++++ app/build.gradle	(revision )
+@@ -0,0 +1,51 @@
++apply plugin: 'com.android.application'
++
++android {
++    compileSdkVersion 23
++    buildToolsVersion "23.0.2"
++
++    defaultConfig {
++        applicationId "com.example.jpushdemo"
++        minSdkVersion 15
++        targetSdkVersion 23
++        versionCode 1
++        versionName "1.0"
++    }
++    buildTypes {
++        release {
++            minifyEnabled false
++            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
++        }
++    }
++    sourceSets {
++        main {
++            //让AS识别libs下的.so第三方包
++            jniLibs.srcDirs = ['libs']
++        }
++
++        // Move the tests to tests/java, tests/res, etc...
++        instrumentTest.setRoot('tests')
++
++        // Move the build types to build-types/<type>
++        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
++        // This moves them out of them default location under src/<type>/... which would
++        // conflict with src/ being used by the main source set.
++        // Adding new build types or product flavors should be accompanied
++        // by a similar customization.
++        debug.setRoot('build-types/debug')
++        release.setRoot('build-types/release')
++    }
++
++    lintOptions {
++        abortOnError false
++    }
++}
++
++dependencies {
++    //让AS识别libs下的.so第三方包
++    compile fileTree(dir: 'libs', include: ['**.*'])
++    testCompile 'junit:junit:4.12'
++    compile 'com.android.support:appcompat-v7:23.1.1'
++    compile 'com.android.support:design:23.1.1'
++    compile files('libs/jpush-android-2.1.3.jar')
++}
+Index: app/src/main/res/layout/set_push_time.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/set_push_time.xml	(revision )
++++ app/src/main/res/layout/set_push_time.xml	(revision )
+@@ -0,0 +1,241 @@
++<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
++    android:id="@+id/layout_root"
++    android:layout_width="fill_parent"
++    android:layout_height="fill_parent"
++    android:background="@drawable/tiledstripes" >
++
++    <LinearLayout
++        android:layout_width="fill_parent"
++        android:layout_height="fill_parent"
++        android:focusable="true"
++        android:focusableInTouchMode="true"
++        android:orientation="vertical"
++        android:padding="20dip" >
++
++        <LinearLayout
++            android:layout_width="fill_parent"
++            android:layout_height="fill_parent"
++            android:layout_marginTop="10dip"
++            android:background="#9C9C9C"
++            android:orientation="vertical"
++            android:padding="10dip"
++            >
++
++            <TextView
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:text="设置接收push时间"
++                android:textColor="#000" />
++        </LinearLayout>
++
++        <LinearLayout
++            android:layout_width="fill_parent"
++            android:layout_height="fill_parent"
++            android:layout_marginTop="10dip"
++            android:background="@drawable/corners_bg"
++            android:orientation="vertical"
++            android:paddingBottom="10dip"
++            android:paddingTop="10dip" >
++
++            <LinearLayout
++                android:layout_width="fill_parent"
++                android:layout_height="fill_parent"
++                android:orientation="horizontal" >
++
++                <TextView
++                    android:layout_width="wrap_content"
++                    android:layout_height="wrap_content"
++                    android:text="Quiet Week Enabled"
++                    android:textSize="16dip" />
++            </LinearLayout>
++            <!--  -->
++
++            <LinearLayout
++                android:layout_width="fill_parent"
++                android:layout_height="fill_parent"
++                android:orientation="horizontal" >
++
++                <LinearLayout
++                    android:layout_width="wrap_content"
++                    android:layout_height="fill_parent"
++                    android:orientation="vertical" >
++
++                    <LinearLayout
++                        android:layout_width="fill_parent"
++                        android:layout_height="wrap_content"
++                        android:orientation="horizontal" >
++
++                        <CheckBox
++                            android:id="@+id/cb_monday"
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                             />
++
++                        <TextView
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                            android:text="Monday"
++                            android:textSize="16dip" />
++                    </LinearLayout>
++
++                    <LinearLayout
++                        android:layout_width="fill_parent"
++                        android:layout_height="wrap_content"
++                        android:orientation="horizontal" >
++
++                        <CheckBox
++                            android:id="@+id/cb_tuesday"
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                             />
++
++                        <TextView
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                            android:text="Tuesday"
++                            android:textSize="16dip" />
++                    </LinearLayout>
++
++                    <LinearLayout
++                        android:layout_width="fill_parent"
++                        android:layout_height="wrap_content"
++                        android:orientation="horizontal" >
++
++                        <CheckBox
++                            android:id="@+id/cb_wednesday"
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                            
++                             />
++
++                        <TextView
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                            android:text="Wednesday"
++                            android:textSize="16dip" />
++                    </LinearLayout>
++
++                    <LinearLayout
++                        android:layout_width="fill_parent"
++                        android:layout_height="wrap_content"
++                        android:orientation="horizontal" >
++
++                        <CheckBox
++                            android:id="@+id/cb_thursday"
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                              />
++
++                        <TextView
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                            android:text="Thursday"
++                            android:textSize="16dip" />
++                    </LinearLayout>
++                </LinearLayout>
++
++                <LinearLayout
++                    android:layout_width="wrap_content"
++                    android:layout_height="fill_parent"
++                    android:orientation="vertical" >
++
++                    <LinearLayout
++                        android:layout_width="fill_parent"
++                        android:layout_height="wrap_content"
++                        android:orientation="horizontal" >
++
++                        <CheckBox
++                            android:id="@+id/cb_friday"
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                            />
++
++                        <TextView
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                            android:text="Friday"
++                            android:textSize="16dip" />
++                    </LinearLayout>
++
++                    <LinearLayout
++                        android:layout_width="fill_parent"
++                        android:layout_height="wrap_content"
++                        android:orientation="horizontal" >
++
++                        <CheckBox
++                            android:id="@+id/cb_saturday"
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                            />
++
++                        <TextView
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                            android:text="Saturday"
++                            android:textSize="16dip" />
++                    </LinearLayout>
++
++                    <LinearLayout
++                        android:layout_width="fill_parent"
++                        android:layout_height="wrap_content"
++                        android:orientation="horizontal" >
++
++                        <CheckBox
++                            android:id="@+id/cb_sunday"
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                            />
++
++                        <TextView
++                            android:layout_width="wrap_content"
++                            android:layout_height="wrap_content"
++                            android:text="Sunday"
++                            android:textSize="16dip" />
++                    </LinearLayout>
++                </LinearLayout>
++            </LinearLayout>
++
++            <LinearLayout
++                android:layout_width="fill_parent"
++                android:layout_height="fill_parent"
++                android:orientation="horizontal" >
++
++                <TextView
++                    android:layout_width="wrap_content"
++                    android:layout_height="wrap_content"
++                    android:text="Quiet Time Enabled"
++                    android:textSize="16dip" />
++            </LinearLayout>
++
++            <TextView
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:text="Start Time"
++                android:textSize="16dip" />
++
++            <TimePicker
++                android:id="@+id/start_time"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content" />
++
++            <TextView
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:text="End Time"
++                android:textSize="16dip" />
++
++            <TimePicker
++                android:id="@+id/end_time"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content" />
++
++            <Button
++                android:id="@+id/bu_setTime"
++                android:layout_width="fill_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginTop="20dip"
++                android:text="确定" />
++        </LinearLayout>
++    </LinearLayout>
++
++</ScrollView>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(revision )
++++ .idea/modules.xml	(revision )
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/JPushDemo.iml" filepath="$PROJECT_DIR$/JPushDemo.iml" />
++      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: app/src/main/java/com/example/jpushdemo/PushSetActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/jpushdemo/PushSetActivity.java	(revision )
++++ app/src/main/java/com/example/jpushdemo/PushSetActivity.java	(revision )
+@@ -0,0 +1,247 @@
++package com.example.jpushdemo;
++
++import android.app.Notification;
++import android.content.Intent;
++import android.os.Bundle;
++import android.os.Handler;
++import android.text.TextUtils;
++import android.util.Log;
++import android.view.KeyEvent;
++import android.view.View;
++import android.view.View.OnClickListener;
++import android.widget.Button;
++import android.widget.EditText;
++import android.widget.Toast;
++
++import java.util.LinkedHashSet;
++import java.util.Set;
++
++import cn.jpush.android.api.BasicPushNotificationBuilder;
++import cn.jpush.android.api.CustomPushNotificationBuilder;
++import cn.jpush.android.api.InstrumentedActivity;
++import cn.jpush.android.api.JPushInterface;
++import cn.jpush.android.api.TagAliasCallback;
++
++
++public class PushSetActivity extends InstrumentedActivity implements OnClickListener {
++    private static final String TAG = "JPush";
++    
++	Button mSetTag;
++	Button mSetAlias;
++	Button mStyleBasic;
++	Button mStyleCustom;
++	Button mSetPushTime;
++
++	
++	@Override
++	public void onCreate(Bundle icicle) {
++		super.onCreate(icicle);
++		setContentView(R.layout.push_set_dialog);
++		init();
++		initListener();
++	}
++	
++	private void init(){
++	    mSetTag = (Button)findViewById(R.id.bt_tag);
++	    mSetAlias = (Button)findViewById(R.id.bt_alias);
++	    mStyleBasic = (Button)findViewById(R.id.setStyle1);
++	    mStyleCustom = (Button)findViewById(R.id.setStyle2);
++	    mSetPushTime = (Button)findViewById(R.id.bu_setTime);
++	}
++	
++	private void initListener(){
++		mSetTag.setOnClickListener(this);
++		mSetAlias.setOnClickListener(this);
++		mStyleBasic.setOnClickListener(this);
++		mStyleCustom.setOnClickListener(this);
++		mSetPushTime.setOnClickListener(this);
++	}
++	
++	@Override
++	public void onClick(View v) {
++		switch (v.getId()) {
++		case R.id.bt_tag:
++			setTag();
++			break;
++		case R.id.bt_alias:
++			setAlias();
++			break;
++		case R.id.setStyle1:
++			setStyleBasic();
++			break;
++		case R.id.setStyle2:
++			setStyleCustom();
++			break;
++		case R.id.bu_setTime:
++			Intent intent = new Intent(PushSetActivity.this, SettingActivity.class);
++			startActivity(intent);
++			break;
++		}
++	}
++	
++	private void setTag(){
++		EditText tagEdit = (EditText) findViewById(R.id.et_tag);
++		String tag = tagEdit.getText().toString().trim();
++		
++        // 检查 tag 的有效性
++		if (TextUtils.isEmpty(tag)) {
++			Toast.makeText(PushSetActivity.this,R.string.error_tag_empty, Toast.LENGTH_SHORT).show();
++			return;
++		}
++		
++		// ","隔开的多个 转换成 Set
++		String[] sArray = tag.split(",");
++		Set<String> tagSet = new LinkedHashSet<String>();
++		for (String sTagItme : sArray) {
++			if (!ExampleUtil.isValidTagAndAlias(sTagItme)) {
++				Toast.makeText(PushSetActivity.this,R.string.error_tag_gs_empty, Toast.LENGTH_SHORT).show();
++				return;
++			}
++			tagSet.add(sTagItme);
++		}
++		
++		//调用JPush API设置Tag
++		mHandler.sendMessage(mHandler.obtainMessage(MSG_SET_TAGS, tagSet));
++
++	} 
++	
++	private void setAlias(){
++		EditText aliasEdit = (EditText) findViewById(R.id.et_alias);
++		String alias = aliasEdit.getText().toString().trim();
++		if (TextUtils.isEmpty(alias)) {
++			Toast.makeText(PushSetActivity.this,R.string.error_alias_empty, Toast.LENGTH_SHORT).show();
++			return;
++		}
++		if (!ExampleUtil.isValidTagAndAlias(alias)) {
++			Toast.makeText(PushSetActivity.this,R.string.error_tag_gs_empty, Toast.LENGTH_SHORT).show();
++			return;
++		}
++		
++		//调用JPush API设置Alias
++		mHandler.sendMessage(mHandler.obtainMessage(MSG_SET_ALIAS, alias));
++	}
++	
++	
++	/**
++	 *设置通知提示方式 - 基础属性
++	 */
++	private void setStyleBasic(){
++		BasicPushNotificationBuilder builder = new BasicPushNotificationBuilder(PushSetActivity.this);
++		builder.statusBarDrawable = R.drawable.ic_launcher;
++		builder.notificationFlags = Notification.FLAG_AUTO_CANCEL;  //设置为点击后自动消失
++		builder.notificationDefaults = Notification.DEFAULT_SOUND;  //设置为铃声（ Notification.DEFAULT_SOUND）或者震动（ Notification.DEFAULT_VIBRATE）  
++		JPushInterface.setPushNotificationBuilder(1, builder);
++		Toast.makeText(PushSetActivity.this, "Basic Builder - 1", Toast.LENGTH_SHORT).show();
++	}
++	
++	
++	/**
++	 *设置通知栏样式 - 定义通知栏Layout
++	 */
++	private void setStyleCustom(){
++		CustomPushNotificationBuilder builder = new CustomPushNotificationBuilder(PushSetActivity.this,R.layout.customer_notitfication_layout,R.id.icon, R.id.title, R.id.text);
++		builder.layoutIconDrawable = R.drawable.ic_launcher;
++		builder.developerArg0 = "developerArg2";
++		JPushInterface.setPushNotificationBuilder(2, builder);
++		Toast.makeText(PushSetActivity.this,"Custom Builder - 2", Toast.LENGTH_SHORT).show();
++	}
++	
++	@Override
++	public boolean onKeyDown(int keyCode, KeyEvent event) {
++		if (keyCode == KeyEvent.KEYCODE_BACK){
++			finish();
++		}
++		return super.onKeyDown(keyCode, event);
++	}
++
++	
++
++	private final TagAliasCallback mAliasCallback = new TagAliasCallback() {
++
++        @Override
++        public void gotResult(int code, String alias, Set<String> tags) {
++            String logs ;
++            switch (code) {
++            case 0:
++                logs = "Set tag and alias success";
++                Log.i(TAG, logs);
++                break;
++                
++            case 6002:
++                logs = "Failed to set alias and tags due to timeout. Try again after 60s.";
++                Log.i(TAG, logs);
++                if (ExampleUtil.isConnected(getApplicationContext())) {
++                	mHandler.sendMessageDelayed(mHandler.obtainMessage(MSG_SET_ALIAS, alias), 1000 * 60);
++                } else {
++                	Log.i(TAG, "No network");
++                }
++                break;
++            
++            default:
++                logs = "Failed with errorCode = " + code;
++                Log.e(TAG, logs);
++            }
++            
++            ExampleUtil.showToast(logs, getApplicationContext());
++        }
++	    
++	};
++	
++    private final TagAliasCallback mTagsCallback = new TagAliasCallback() {
++
++        @Override
++        public void gotResult(int code, String alias, Set<String> tags) {
++            String logs ;
++            switch (code) {
++            case 0:
++                logs = "Set tag and alias success";
++                Log.i(TAG, logs);
++                break;
++                
++            case 6002:
++                logs = "Failed to set alias and tags due to timeout. Try again after 60s.";
++                Log.i(TAG, logs);
++                if (ExampleUtil.isConnected(getApplicationContext())) {
++                	mHandler.sendMessageDelayed(mHandler.obtainMessage(MSG_SET_TAGS, tags), 1000 * 60);
++                } else {
++                	Log.i(TAG, "No network");
++                }
++                break;
++            
++            default:
++                logs = "Failed with errorCode = " + code;
++                Log.e(TAG, logs);
++            }
++            
++            ExampleUtil.showToast(logs, getApplicationContext());
++        }
++        
++    };
++    
++	private static final int MSG_SET_ALIAS = 1001;
++	private static final int MSG_SET_TAGS = 1002;
++	
++	
++
++    private final Handler mHandler = new Handler() {
++        @Override
++        public void handleMessage(android.os.Message msg) {
++            super.handleMessage(msg);
++            switch (msg.what) {
++            case MSG_SET_ALIAS:
++                Log.d(TAG, "Set alias in handler.");
++                JPushInterface.setAliasAndTags(getApplicationContext(), (String) msg.obj, null, mAliasCallback);
++                break;
++                
++            case MSG_SET_TAGS:
++                Log.d(TAG, "Set tags in handler.");
++                JPushInterface.setAliasAndTags(getApplicationContext(), null, (Set<String>) msg.obj, mTagsCallback);
++                break;
++                
++            default:
++                Log.i(TAG, "Unhandled msg - " + msg.what);
++            }
++        }
++    };
++	
++}
+\ No newline at end of file
+Index: app/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/colors.xml	(revision )
++++ app/src/main/res/values/colors.xml	(revision )
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <color name="colorPrimary">#3F51B5</color>
++    <color name="colorPrimaryDark">#303F9F</color>
++    <color name="colorAccent">#FF4081</color>
++</resources>
+Index: app/src/main/java/com/example/jpushdemo/ExampleUtil.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/jpushdemo/ExampleUtil.java	(revision )
++++ app/src/main/java/com/example/jpushdemo/ExampleUtil.java	(revision )
+@@ -0,0 +1,111 @@
++package com.example.jpushdemo;
++
++import android.content.Context;
++import android.content.pm.ApplicationInfo;
++import android.content.pm.PackageInfo;
++import android.content.pm.PackageManager;
++import android.content.pm.PackageManager.NameNotFoundException;
++import android.net.ConnectivityManager;
++import android.net.NetworkInfo;
++import android.os.Bundle;
++import android.os.Looper;
++import android.telephony.TelephonyManager;
++import android.util.Log;
++import android.widget.Toast;
++
++import java.util.regex.Matcher;
++import java.util.regex.Pattern;
++
++import cn.jpush.android.api.JPushInterface;
++
++public class ExampleUtil {
++    public static final String PREFS_NAME = "JPUSH_EXAMPLE";
++    public static final String PREFS_DAYS = "JPUSH_EXAMPLE_DAYS";
++    public static final String PREFS_START_TIME = "PREFS_START_TIME";
++    public static final String PREFS_END_TIME = "PREFS_END_TIME";
++    public static final String KEY_APP_KEY = "JPUSH_APPKEY";
++
++    public static boolean isEmpty(String s) {
++        if (null == s)
++            return true;
++        if (s.length() == 0)
++            return true;
++        if (s.trim().length() == 0)
++            return true;
++        return false;
++    }
++    
++    // 校验Tag Alias 只能是数字,英文字母和中文
++    public static boolean isValidTagAndAlias(String s) {
++        Pattern p = Pattern.compile("^[\u4E00-\u9FA50-9a-zA-Z_-]{0,}$");
++        Matcher m = p.matcher(s);
++        return m.matches();
++    }
++
++    // 取得AppKey
++    public static String getAppKey(Context context) {
++        Bundle metaData = null;
++        String appKey = null;
++        try {
++            ApplicationInfo ai = context.getPackageManager().getApplicationInfo(
++                    context.getPackageName(), PackageManager.GET_META_DATA);
++            if (null != ai)
++                metaData = ai.metaData;
++            if (null != metaData) {
++                appKey = metaData.getString(KEY_APP_KEY);
++                if ((null == appKey) || appKey.length() != 24) {
++                    appKey = null;
++                }
++            }
++        } catch (NameNotFoundException e) {
++
++        }
++        return appKey;
++    }
++    
++    // 取得版本号
++    public static String GetVersion(Context context) {
++		try {
++			PackageInfo manager = context.getPackageManager().getPackageInfo(
++					context.getPackageName(), 0);
++			return manager.versionName;
++		} catch (NameNotFoundException e) {
++			return "Unknown";
++		}
++	}
++
++    public static String getDeviceId(Context context) {
++        String deviceId = JPushInterface.getUdid(context);
++
++        return deviceId;
++    }
++	
++    public static void showToast(final String toast, final Context context)
++    {
++    	new Thread(new Runnable() {
++			
++			@Override
++			public void run() {
++				Looper.prepare();
++				Toast.makeText(context, toast, Toast.LENGTH_SHORT).show();
++				Looper.loop();
++			}
++		}).start();
++    }
++    
++    public static boolean isConnected(Context context) {
++        ConnectivityManager conn = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
++        NetworkInfo info = conn.getActiveNetworkInfo();
++        return (info != null && info.isConnected());
++    }
++    
++	public static String getImei(Context context, String imei) {
++		try {
++			TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
++			imei = telephonyManager.getDeviceId();
++		} catch (Exception e) {
++			Log.e(ExampleUtil.class.getSimpleName(), e.getMessage());
++		}
++		return imei;
++	}
++}
